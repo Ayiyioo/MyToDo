@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*设置所有动画的缓慢程度为0.6s，transition*/
+    transition: 0.6s;
+}
+body{
+    background: #f6c0fc;
+    /*设置透明度*/
+    opacity: 0.8;
+    /*设置盒模型的width和height是包括边框大小的*/
+    box-sizing: border-box;
+}
+.main{
+    padding: 25px 10px;
+    max-width: 700px;
+    margin: 25px auto;
+    background: rgba(251, 251, 251, 0.35);
+    box-shadow: 5px 5px 2px 2px #efa7f8;
+    border-radius: 8px;
+}
+.title{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+.addToDo,.item{
+    width: 95%;
+    height: 30px;
+    border-bottom: 1px solid #dec1e9;
+}
+form{
+    height: 100%;
+    width: 100%;
+}
+.addToDo input[type=text]{
+    width: 85%;
+    margin: 2px 5px 2px 10px;
+    height: 92%;
+    padding: 0 0 0 10px;
+    border-radius: 3px;
+}
+.addToDo input[type=text]:focus{
+    background: rgba(251, 251, 251, 0.35);
+    border: none;
+    /*outline: solid 1px yellow;*/
+    /*边框倒影*/
+    box-shadow: 1px 1px 1px 0 yellow inset;
+}
+.addToDo input[type=submit]{
+    width: 10%;
+    height: 92%;
+    border-radius: 3px;
+    font-size: 14px;
+    background: #f3e926;
+    cursor: pointer;
+}
+.addToDo input[type=submit]:hover{
+    background: #ccc;
+    color: yellow;
+}
+.item{
+    margin: 5px 10px 5px 10px;
+    padding: 3px 5px 0 18px;
+    width: 90%;
+    /*圆角*/
+    border-radius: 5px;
+
+}
+.item:hover{
+    cursor: pointer;
+    background: #f3e926;
+    /*透明度*/
+    opacity: 0.5;
+}
+.item span{
+    display: inline-block;
+    line-height: 28px;
+    height: 98%;
+    margin-right: 8px;
+}
+span[class=show]{
+    width: 82%;
+    padding: 10px auto;
+    padding: 0 0 0 10px;
+}
+.delete:hover,.detialCheck:hover{
+    color: white;
+}
+.bg{
+   position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.1);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+.detial{
+    height: 320px;
+    width: 350px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 2px pink inset;
+    position: absolute;
+    display: none;
+}
+.close {
+    display: inline-block;
+    float: right;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    background: pink;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: -8px -8px 0 0px;
+}
+.close:hover{
+    cursor: pointer;
+    color: white;
+    background:  #f3e926;
+}
+.detialCon input{
+    display: block;
+    width: 80%;
+    height: 30px;
+    margin:15px 0 5px 25px;
+    padding-left: 15px;
+    background: rgba(239,167,248,0.1);
+    /*opacity: 0.1;*/
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.detialCon input:focus,.desc:focus{
+    /*border: 1px solid #363636;*/
+    box-shadow: 1px 2px 2px 2px #FFA0CF;
+    background: #fff;
+}
+#date ,#time{
+    display: inline-block;
+    float: left;
+    width: 40%;
+    margin-left: 10px;
+}
+.con{
+    font-size: 18px;
+}
+.desc{
+    margin: 10px 0 0px 25px;
+    padding: 12px;
+    background: rgba(239,167,248,0.1);
+    /*opacity: 0.2;*/
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    /*border: 1px solid #363636;*/
+}
+#update{
+    position: relative;
+    height: 30px;
+    width: 50px;
+    text-align: center;
+    line-height: 30px;
+    top: 2px;
+    left: 150px;
+    border-radius: 5px;
+    background: #feb6c3;
+
+}
+.completeItem{
+    color: #959595;
+    background: #d5d1d5;
+
+}
+.completeItem:after{
+    content: '';
+    position: relative;
+    top: -14px;
+    height: 1px;
+    width: 96%;
+    background: #969292;
+    display: block;
+    margin-left: 20px;
+}
+.msg{
+    display: none;
+    background: red;
+    height: 25px;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    line-height: 25px;
+}
+.contentmsg{
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 18px;
+
+}
+.sure{
+    height: 15px;
+    width: 20px;
+
+}
+.sure:hover{
+    cursor: pointer;
+    background: #f3e926;
+    border: 1px solid #f3e926;
+    box-shadow: 1px 0 2px 1px #feb6c3;
+    border-radius: 5px;
+}

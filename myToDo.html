@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>My to do</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="default.date.css">
+    <link rel="stylesheet" href="default.time.css">
+</head>
+
+<body>
+<!--提醒弹出层-->
+<div class="msg">
+    <div class="contentmsg"></div>
+    <span class="sure">收到了</span>
+</div>
+
+<div class="main">
+    <!--标题-->
+    <div class="title">我的ToDo</div>
+    <!--添加-->
+    <div class="addToDo">
+        <form id="addform">
+            <input type="text" name="add" id="add" autocomplete="off">
+            <input type="submit" value="添加" id="addSubmit">
+        </form>
+    </div>
+    <!--任务陈述列表-->
+    <div class="list">
+    </div>
+
+</div>
+<!--细节弹出层设计-->
+<div class="bg"></div>
+<div class="detial">
+    <div class="close">×</div>
+    <div class="updateform">
+        <div class="detialCon">
+            <input type="text" class="con">
+            <textarea class="desc" cols="24" rows="6"></textarea>
+            <input type="text" name="date" id="date" placeholder="提醒日期">
+            <input type="text" name="date" id="time" placeholder="提醒时间">
+        </div>
+        <input type="button" value="修改" id="update">
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script src="picker.js"></script>
+<script src="picker.time.js"></script>
+<script src="picker.date.js"></script>
+
+<script src="store/store.js"></script>
+<script src="todo.js"></script>
+
+</html>
