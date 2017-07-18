@@ -156,7 +156,7 @@
     function update_detial_task(index, date) {
 
         update_task(index, date);
-        var sure = confirm('已经更新成功，返回首页？');
+        var sure = confirm('更新成功，返回首页？');
         sure ? detial_hide() : null;
     };
     //更新内容操作
